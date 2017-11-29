@@ -1,0 +1,22 @@
+<!--original code first test-->
+<input type="text" id="YQNum" maxlength="50"/>       //Tracking number input box
+<input type="button" value="TRACK" onclick="doTrack()"/>     //The button is used to call script method
+<div id="YQContainer"></div>     //Container to display tracking result
+
+<script type="text/javascript" src="//www.17track.net/externalcall.js"></script>
+<script type="text/javascript">
+function doTrack() {
+    var num = document.getElementById("YQNum").value;
+    if(num===""){
+        alert("Enter your number."); 
+        return;
+    }
+    YQV5.trackSingle({
+        YQ_ContainerId:"YQContainer",       //Required, Specify the container ID of content host.
+        YQ_Height:400,      //Optional, Specify tracking result height, max height 800px, default is filled the container.
+        YQ_Fc:"0",       //Optional, Select carrier, default is auto-identify.
+        YQ_Lang:"en",       //Optional, Specify UI language, default language is automatically detected based on browser settings.
+        YQ_Num:num     //Required, Specify number need to be tracked.
+    });
+}
+</script>
