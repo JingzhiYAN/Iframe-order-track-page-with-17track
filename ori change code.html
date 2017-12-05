@@ -1,15 +1,16 @@
 <script>
-function a() {
+function a()
+{
     var num = document.getElementById("tra").value;
-    if(num===""){
+    if(num==""){
         alert("Enter your number."); 
         return;
     }
     var fro = "http://www.17track.net/en/track?nums=";
-    var fro += num;
-    var num += "&fc=190094";
-    document.location=num;   
+    fro += num;
+    fro += "&fc=190094";
+    document.location=fro;   
 }
 </script>
-<input type="text" id="tra" maxlength="50"/>       
+<input type="text" id="tra" maxlength="50">       
 <button onclick="a()">Track</button>  
