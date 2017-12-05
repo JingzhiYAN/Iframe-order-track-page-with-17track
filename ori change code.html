@@ -1,18 +1,15 @@
-<input type="text" id="tra" maxlength="50"/>       
-<input type="button" value="TRACK" onclick="a()">   
-<div id="YQContainer"></div>  
-
-<script type="text/javascript">
+<script>
 function a() {
     var num = document.getElementById("tra").value;
     if(num===""){
         alert("Enter your number."); 
         return;
     }
-    var fro = "http://www.17track.net/en/track?nums="
-    var fro += num 
-    var num += "&fc=190094"
+    var fro = "http://www.17track.net/en/track?nums=";
+    var fro += num;
+    var num += "&fc=190094";
     document.location=num;   
 }
 </script>
-<!--We are not going to use this code because the iframe tested to have google ads and other kind of ads from this website.-->
+<input type="text" id="tra" maxlength="50"/>       
+<button onclick="a()">Track</button>  
